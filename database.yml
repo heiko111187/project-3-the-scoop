@@ -1,0 +1,35 @@
+users:
+  user1:
+    username: user1
+    articleIds:
+      - 1
+    commentIds:
+      - 1
+  user2:
+    username: user2
+    articleIds: []
+    commentIds: []
+articles:
+  '1':
+    id: 1
+    title: article1
+    url: art1.com
+    username: user1
+    commentIds:
+      - 1
+    upvotedBy:
+      - user1
+    downvotedBy: []
+    comments:
+      - &ref_0
+        id: 1
+        body: comment1
+        username: user1
+        articleId: 1
+        upvotedBy:
+          - user1
+        downvotedBy: []
+comments:
+  '1': *ref_0
+nextArticleId: 2
+nextCommentId: 2
